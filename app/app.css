@@ -38,7 +38,8 @@ body {
 .minute{left: 55%;}
 .second{left:64%;}
 canvas{
-  position: absolute;
+  position: fixed;
+  z-index: -1;
   top: 0;
   opacity: 0.40;
 }
