@@ -11,4 +11,13 @@ angular.module('myApp.view1', ['ngRoute'])
 
 .controller('View1Ctrl', [function() {
 
+    $(document).ready(function(){
+      console.log('logged in');
+      $(".digits").countdown({
+        image: "img/digits.png",
+        format: "dd:hh:mm:ss",
+        endTime: new Date('11/03/16 00:00:00')
+      });
+    });
+
 }]);

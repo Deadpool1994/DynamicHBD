@@ -31,3 +31,9 @@ body {
   padding: 40px 15px;
   text-align: center;
 }
+.days, .hour, .minute, .second{position: absolute; color: #fff;font-size: 20px;}
+
+.days{left: 35%;}
+.hour{left: 45%;}
+.minute{left: 55%;}
+.second{left:64%;}
