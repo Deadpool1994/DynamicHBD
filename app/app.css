@@ -37,3 +37,10 @@ body {
 .hour{left: 45%;}
 .minute{left: 55%;}
 .second{left:64%;}
+canvas{
+  position: absolute;
+  top: 0;
+  opacity: 0.40;
+}
+#wrapper .avatar img{ transition: all .2s ease-in-out; }
+#wrapper .avatar img:hover { transform: scale(1.5);cursor: pointer; }
