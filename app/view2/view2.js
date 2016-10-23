@@ -10,5 +10,6 @@ angular.module('myApp.view2', ['ngRoute'])
 }])
 
 .controller('View2Ctrl', [function() {
-
+  $('.navbar-fixed-top').hide();
+//  $('body').css('background', 'transparent');
 }]);

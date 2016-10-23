@@ -2,7 +2,7 @@ html, body, .wrapper {
   height: 100%;
   width: 100%;
 }
-  body { background: url(../img/bg-tile.png) repeat; }
+  /*body { background: url(../img/bg-tile.png) repeat; }*/
 
 .wrapper { display: table; }
 
