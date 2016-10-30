@@ -269,4 +269,9 @@ Rocket.prototype.render = function(c) {
     c.restore();
 };
 
+}])
+
+.controller('BirthdayCtrl', ['$scope',function($scope) {
+  console.log('Birthday controller');
+
 }]);

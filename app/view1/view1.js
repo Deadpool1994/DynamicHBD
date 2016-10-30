@@ -22,7 +22,7 @@ angular.module('myApp.view1', ['ngRoute'])
       $(".digits").countdown({
         image: "img/digits.png",
         format: "dd:hh:mm:ss",
-        endTime: new Date('10/25/16 01:05:00'),
+        endTime: new Date('2016-11-03 00:00:00'),
         timerEnd: function(){happyBirthday();}
       });
     });
