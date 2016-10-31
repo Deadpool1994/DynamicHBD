@@ -1,0 +1,32 @@
+
+  {
+    "id":1,
+    "name":"jaimin",
+    "dob":"2016-11-03 00:00:00",
+    "profile_image":"avatar-jaimin.jpg",
+    "images":[
+      {
+        "path":"jaimin-image1.jpg",
+        "detail": "Fighter"
+      },
+      {
+        "path":"jaimin-image2.jpg",
+        "detail": ""
+      },
+      {
+        "path":"jaimin-image3.jpg",
+        "detail": "the real GABRU !!!!"
+      }
+    ],
+    "audios": [
+      {
+        "path":"jaimin-audio1.mp3"
+      }
+    ],
+    "videos": [
+      {
+        "path":"jaimin-video1.webm"
+      }
+    ]
+
+  }

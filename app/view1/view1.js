@@ -9,22 +9,23 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }])
 
-.controller('View1Ctrl', ['$scope','$http', '$location',function($scope,$http,$location) {
+.controller('View1Ctrl', ['$http', '$location',function($http,$location) {
+var dob;
+
+  $http.get('json/birthday.json').success(function(data){
+    dob = data.dob;
+    $(".digits").countdown({
+      image: "img/digits.png",
+      format: "dd:hh:mm:ss",
+      endTime: new Date(dob),
+      timerEnd: function(){happyBirthday();}
+    });
+  });
 
   var happyBirthday =  function(){
-    console.log('getting the time');
     window.location.href = "/#!/view2";
-
-  console.log('gone');
  };
-    $(document).ready(function(){
-      console.log('logged in');
-      $(".digits").countdown({
-        image: "img/digits.png",
-        format: "dd:hh:mm:ss",
-        endTime: new Date('2016-11-03 00:00:00'),
-        timerEnd: function(){happyBirthday();}
-      });
-    });
-
+ $('.wrapper .hidden-button').on('click',function(){
+   happyBirthday();
+ });
 }]);

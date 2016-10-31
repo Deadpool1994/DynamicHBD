@@ -9,11 +9,19 @@ angular.module('myApp.view2', ['ngRoute'])
   });
 }])
 
-.controller('View2Ctrl', [function() {
-  $('.navbar-fixed-top').hide();
-//  $('body').css('background', 'transparent');
+.filter("trustUrl", ['$sce', function ($sce) {
+        return function (recordingUrl) {
+            return $sce.trustAsResourceUrl(recordingUrl);
+        };
+    }])
+.controller('View2Ctrl', ['$scope','$http',function($scope,$http) {
 
-console.log('there');
+  $http.get('json/birthday.json').success(function(data){
+    $scope.data = data;
+    console.log(data);
+  });
+
+
 var SCREEN_WIDTH = window.innerWidth,
     SCREEN_HEIGHT = window.innerHeight,
     mousePos = {
@@ -31,7 +39,7 @@ var SCREEN_WIDTH = window.innerWidth,
 
 // init
 $(document).ready(function() {
-    document.body.appendChild(canvas);
+    $( "#wrapper" ).append(canvas);
     canvas.width = SCREEN_WIDTH;
     canvas.height = SCREEN_HEIGHT;
     setInterval(launch, 800);
