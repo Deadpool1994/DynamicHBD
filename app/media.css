@@ -49,4 +49,17 @@ canvas{
   video{
     height: 240px;
     width: 320px;
-  }}
+  }
+  .second {
+      left: 125%;
+  }
+  .minute {
+    left: 90%;
+}
+.hour {
+    left: 60%;
+}
+.days {
+    left: 28%;
+}
+}
