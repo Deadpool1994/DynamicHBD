@@ -51,15 +51,15 @@ canvas{
     width: 320px;
   }
   .second {
-      left: 125%;
+      left: 130%;
   }
   .minute {
-    left: 90%;
+    left: 94%;
 }
 .hour {
-    left: 60%;
+    left: 63%;
 }
 .days {
-    left: 28%;
+    left: 30%;
 }
 }
