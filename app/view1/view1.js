@@ -14,18 +14,26 @@ var dob;
 
   $http.get('json/birthday.json').success(function(data){
     dob = data.dob;
+    var birthday = new Date(dob);
+    var current_date = new Date();
+    var diff = current_date - birthday;
+    if(diff > 0 && diff < 86400000){
+      happyBirthday();
+    }
     $(".digits").countdown({
       image: "img/digits.png",
-      format: "dd:hh:mm:ss",
+      format: "ddd:hh:mm:ss",
       endTime: new Date(dob),
       timerEnd: function(){happyBirthday();}
     });
   });
 
   var happyBirthday =  function(){
-    window.location.href = "/#!/view2";
+    window.location.href = "/#/happybirthday";
  };
  $('.wrapper .hidden-button').on('click',function(){
    happyBirthday();
  });
+
+
 }]);

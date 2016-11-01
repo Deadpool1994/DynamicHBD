@@ -22,7 +22,7 @@
 						<!-- Thumbnails -->
 							<section class="thumbnails">
 								<div ng-repeat="image in data.images">
-									<a href="javascript:void(0)">
+									<a>
 										<img ng-src="images/{{image.path}}" />
 										<h3>{{image.detail}}</h3>
 									</a>
@@ -45,7 +45,7 @@
 					</section>
 					<div class="audio">
 					  <audio ng-repeat="audio in data.audios" controls="controls">
-					  		<source src="{{audio.path | trustUrl}}" >
+					  		<source ng-src="{{audio.path | trustUrl}}" >
 					  </audio>
 					</div>
 
