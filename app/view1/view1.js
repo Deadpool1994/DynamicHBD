@@ -22,7 +22,7 @@ var dob;
     }
     $(".digits").countdown({
       image: "img/digits.png",
-      format: "ddd:hh:mm:ss",
+      format: "dd:hh:mm:ss",
       endTime: new Date(dob),
       timerEnd: function(){happyBirthday();}
     });
